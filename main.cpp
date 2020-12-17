@@ -18,13 +18,14 @@ int main() {
   scanf ("%d", &br);
   b[j]=br;
   }
-  for (int i=1; i<=n; i++) {
-    for (int j=1; j<=m; j++) {
+  for (int i=n; i>0; i--) {
+    for (int j=m; j>0; j--) {
       sum= a[i]+ b[j];
-      if ( (sum>=l) && (sum<=r) ) {
+      if (sum<l ) break;
+      else if ( (sum>=l) && (sum<=r) ) {
         count++;
       }
     }
   }
-  printf ("%d", count);
+  printf ("%d\n", count);
 }
